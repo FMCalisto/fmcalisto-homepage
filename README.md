@@ -14,7 +14,7 @@ Customizing
 ----
 To change current theme, replace its name in [index.html](index.html)
 
-To customize Bg colors theme links, modify the array in [js/home.js](js/home.js):
+To customize Bg colors theme links, modify the colors list in [js/home.js](js/home.js):
 
 ```javascript
 # Bg colors
@@ -23,6 +23,26 @@ dribbbleBgColor = "#EA4C89"
 behanceBgColor = "#005CFF"
 linkedinBgColor = "#0085AF"
 githubBgColor = "#181818"
+exampleBgColor = "#FFF"
+```
+
+To add new functions call to the bottom buttons just create a new as the example show us in [js/home.js](js/home.js):
+
+```javascript
+# Call this func
+funcHoverLinkAndChangeBodyBg("a.dribbble", dribbbleBgColor)
+funcHoverLinkAndChangeBodyBg("a.behance", behanceBgColor)
+funcHoverLinkAndChangeBodyBg("a.linkedin", linkedinBgColor)
+funcHoverLinkAndChangeBodyBg("a.github", githubBgColor)
+funcHoverLinkAndChangeBodyBg("a.example", exampleBgColor)
+```
+
+And finally add the *Jade* (**HTML**) source in [index.html](index.html):
+
+```html
+<a href="https://example.com" class="example">
+  EXAMPLE
+</a>
 ```
 
 To make new theme, you can copy an existing one, and change the file [css/home.css](css/home.css) as you like.
